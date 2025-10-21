@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pmodoro Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pmodoro</h1>
+        
+        <div class="tabs">
+            <button class="tab active" data-mode="study">Study</button>
+            <button class="tab" data-mode="break">Break</button>
+        </div>
+
+        <div class="settings">
+            <div class="input-group">
+                <label for="studyTime">Study Time (minutes):</label>
+                <input type="number" id="studyTime" min="1" max="120" value="25">
+            </div>
+            <div class="input-group">
+                <label for="breakTime">Break Time (minutes):</label>
+                <input type="number" id="breakTime" min="1" max="60" value="5">
+            </div>
+        </div>
+
+        <div class="timer-display">
+            <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+
+        <button class="start-btn" id="startBtn">Start</button>
+        
+        <div class="current-mode">
+            <span id="modeLabel">Study Mode</span>
+        </div>
+    </div>
+
+    <!-- Countdown Animation Overlay -->
+    <div class="countdown-overlay" id="countdownOverlay">
+        <div class="countdown-text" id="countdownText">3</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
